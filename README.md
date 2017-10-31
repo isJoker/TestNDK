@@ -78,4 +78,4 @@ NDK集成开发流程（AS）
 	2). 在Activity中调用native方法:
 	
 		        String result = new JNIS().helloJNI();
-        	        Log.e("TAG", "result="+result);
+			Log.e("TAG", "result="+result);
