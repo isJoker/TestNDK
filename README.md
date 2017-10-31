@@ -39,7 +39,7 @@ NDK集成开发流程（AS）
 			
 			生成头文件: com_example_wanjiacheng_testndk_JNIS.h
 			
-			函数声明: JNIEXPORT jstring JNICALL Java_com_example_wanjiacheng_testndk_JNIS_helloJNI(JNIEnv *, jobject);
+			函数声明: JNIEXPORT jstring JNICALL Java_com_example_wanjiacheng_testndk_JNIS_helloJNI(JNIEnv *env, jobject instance);
 			
 	3). 将生成的头文件转移到jni文件夹下
 	
