@@ -5,12 +5,14 @@ NDK集成开发流程（AS）
 
 
 1. 安装配置NDK
+
 	1). 解压NDK的zip包到非中文目录
 	
 	2). 配置path : 解压后NDK的根目录----->ndk-build
 	
 
 2. 给AS配置关联NDK
+
 	1). local.properties中添加配置
      ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
      
@@ -24,6 +26,7 @@ NDK集成开发流程（AS）
 	}
 
 4. 定义对应的JNI
+
 	1). 在main下创建jni文件夹
 	
 	2). 生成native方法对应的JNI函数声明头文件: 命令窗口中, 进入java文件夹
@@ -50,11 +53,13 @@ NDK集成开发流程（AS）
 		}
 		
 6. 编译生成不同平台下的动态链接文件
+
 	1). 执行rebuild, 生成so文件
 	
 	2). so文件目录: build\intermediates\ndk\debug\lib\.....
 	
 7. 调用native方法:
+
 	1). 在native方法所在的类中加载so文件
 			static {
         			System.loadLibrary("HelloJni");
