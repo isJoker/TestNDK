@@ -55,10 +55,10 @@ NDK集成开发流程（AS）
 5. 指定编译的不同CPU
 
 		defaultConfig {
-    			ndk{
-        			moduleName "HelloJni" //so文件: lib+moduleName+.so
-        			abiFilters "armeabi", "armeabi-v7a", "x86" //cpu的类型
-    			}
+    		    ndk{
+        		moduleName "HelloJni" //so文件: lib+moduleName+.so
+        		abiFilters "armeabi", "armeabi-v7a", "x86" //cpu的类型
+    		    }
 		}
 		
 6. 编译生成不同平台下的动态链接文件
@@ -72,10 +72,10 @@ NDK集成开发流程（AS）
 	1). 在native方法所在的类中加载so文件
 	
 			static {
-        			System.loadLibrary("HelloJni");
+        		    System.loadLibrary("HelloJni");
     			}
 			
 	2). 在Activity中调用native方法:
 	
-			String result = new JNIS().helloJNI();
-        		Log.e("TAG", "result="+result);
+		String result = new JNIS().helloJNI();
+        	Log.e("TAG", "result="+result);
