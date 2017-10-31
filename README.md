@@ -14,8 +14,8 @@ NDK集成开发流程（AS）
 2. 给AS配置关联NDK
 
 	1). local.properties中添加配置
-
-    		        ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
+	
+			ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
      
 	2). gradle.properties中添加配置
 	
