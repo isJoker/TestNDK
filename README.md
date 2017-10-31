@@ -19,7 +19,7 @@ NDK集成开发流程（AS）
      
 	2). gradle.properties中添加配置
 	
-		        android.useDeprecatedNdk=true//可以用过时的方法
+		       android.useDeprecatedNdk=true//可以用过时的方法
 		
 
 3. 编写native方法:
