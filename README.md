@@ -25,7 +25,7 @@ NDK集成开发流程（AS）
 3. 编写native方法:
 
 			public class JNIS {
-    				public native String helloJNI();
+    			    public native String helloJNI();
 			}
 
 4. 定义对应的JNI
