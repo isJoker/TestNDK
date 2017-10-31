@@ -14,16 +14,19 @@ NDK集成开发流程（AS）
 2. 给AS配置关联NDK
 
 	1). local.properties中添加配置
-     ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
+
+    		 ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
      
 	2). gradle.properties中添加配置
+	
 		android.useDeprecatedNdk=true//可以用过时的方法
 		
 
 3. 编写native方法:
-	public class JNIS {
-    		public native String helloJNI();
-	}
+
+			public class JNIS {
+    				public native String helloJNI();
+			}
 
 4. 定义对应的JNI
 
@@ -41,6 +44,7 @@ NDK集成开发流程（AS）
 	3). 将生成的头文件转移到jni文件夹下
 	
 	4). 在jni下定义对应的函数文件: test.c
+	
 		#include "com_example_wanjiacheng_testndk_JNIS.h"
 		JNIEXPORT jstring JNICALL Java_com_example_wanjiacheng_testndk_JNIS_helloJNI
   		(JNIEnv * env, jobject jobj) {
@@ -49,6 +53,7 @@ NDK集成开发流程（AS）
 		
 
 5. 指定编译的不同CPU
+
 		defaultConfig {
     			ndk{
         			moduleName "HelloJni" //so文件: lib+moduleName+.so
@@ -65,10 +70,12 @@ NDK集成开发流程（AS）
 7. 调用native方法:
 
 	1). 在native方法所在的类中加载so文件
+	
 			static {
         			System.loadLibrary("HelloJni");
     			}
 			
 	2). 在Activity中调用native方法:
+	
 			String result = new JNIS().helloJNI();
         		Log.e("TAG", "result="+result);
