@@ -15,11 +15,11 @@ NDK集成开发流程（AS）
 
 	1). local.properties中添加配置
 
-    		 ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
+    		        ndk.dir=D\:\\android-ndk32-r10-windows-x86_64\\android-ndk-r10
      
 	2). gradle.properties中添加配置
 	
-		android.useDeprecatedNdk=true//可以用过时的方法
+		        android.useDeprecatedNdk=true//可以用过时的方法
 		
 
 3. 编写native方法:
@@ -77,5 +77,5 @@ NDK集成开发流程（AS）
 			
 	2). 在Activity中调用native方法:
 	
-		String result = new JNIS().helloJNI();
-        	Log.e("TAG", "result="+result);
+		        String result = new JNIS().helloJNI();
+        	        Log.e("TAG", "result="+result);
