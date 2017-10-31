@@ -29,9 +29,13 @@ NDK集成开发流程（AS）
 
 	1). 在main下创建jni文件夹
 	
-	2). 生成native方法对应的JNI函数声明头文件: 命令窗口中, 进入java文件夹
+	2). 生成native方法对应的JNI函数声明头文件: 
+			命令窗口中, 进入java文件夹
+	
 			执行命令: javah com.example.wanjiacheng.testndk.JNIS
+			
 			生成头文件: com_example_wanjiacheng_testndk_JNIS.h
+			
 			函数声明: JNIEXPORT jstring JNICALL Java_com_example_wanjiacheng_testndk_JNIS_helloJNI(JNIEnv *, jobject);
 			
 	3). 将生成的头文件转移到jni文件夹下
